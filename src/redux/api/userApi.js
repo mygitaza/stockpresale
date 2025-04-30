@@ -3,14 +3,14 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const userApi = createApi({
     reducerPath: 'userApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://stockbackend-znbu.onrender.com',
+        baseUrl: 'https://stockbackend-znbu.onrender.com/api/users',
         credentials: 'include',
     }),
     endpoints: (builder) => ({
         // register
         registerUser: builder.mutation({
             query: (userData) => ({
-                url: '/api/users/register',
+                url: '/register',
                 method: 'POST',
                 body: userData
             }),
@@ -19,7 +19,7 @@ export const userApi = createApi({
         // login
         loginUser: builder.mutation({
             query: (credentials) => ({
-                url: '/api/users/login',
+                url: '/login',
                 method: 'POST',
                 body: credentials,
             }),
@@ -28,7 +28,7 @@ export const userApi = createApi({
         // logout
         logoutUser: builder.mutation({
             query: () => ({
-                url: '/api/users/logout',
+                url: '/logout',
                 method: 'POST'
             }),
         }),
@@ -36,7 +36,7 @@ export const userApi = createApi({
         // get all users
         fetchUsers: builder.query({
             query: () => ({
-                url: '/api/users/users',
+                url: '/users',
                 method: 'GET',
             }),
         }),
@@ -44,7 +44,7 @@ export const userApi = createApi({
         // Delete user
         deleteUser: builder.mutation({
             query: (id) => ({
-                url: `/api/users/users/${id}`,
+                url: `/users/${id}`,
                 method: 'DELETE'
             }),
         }),
