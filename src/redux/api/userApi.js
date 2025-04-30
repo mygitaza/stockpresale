@@ -38,7 +38,6 @@ export const userApi = createApi({
             query: () => ({
                 url: '/api/users/users',
                 method: 'GET',
-                credentials: 'include',
             }),
         }),
 
