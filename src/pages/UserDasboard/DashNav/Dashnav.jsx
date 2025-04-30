@@ -1,7 +1,6 @@
 import React from 'react'
 import './Dashnav.css'
 import logo from '../../../assets/logo.svg'
-import profileImg from '../../../assets/accountIcon.svg'
 
 const Dashnav = () => {
   return (

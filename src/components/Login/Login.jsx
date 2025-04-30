@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Login.css";
-import closeIcon from "../../assets/closeIcon.svg";
 import {
   useLoginUserMutation,
   useRegisterUserMutation,
@@ -9,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/slices/authSlice";
 import { useNavigate } from "react-router";
 
-const Login = ({ setShowLogin }) => {
+const Login = () => {
   const [currState, setCurrState] = useState("Sign up");
   const [countries, setCountries] = useState([]);
   const [isFetched, setIsFetched] = useState(false);
@@ -62,7 +61,6 @@ const Login = ({ setShowLogin }) => {
         localStorage.setItem("user", JSON.stringify(user));
         localStorage.setItem("token", token);
         console.log("User saved:", user);
-        setShowLogin(false);
         navigate("/dashboard/add-stock");
       }
     } catch (error) {
@@ -109,14 +107,7 @@ const Login = ({ setShowLogin }) => {
   return (
     <div className="login">
       <form className="login-form" onSubmit={handleSubmit}>
-        <div className="logintop">
-          <h2>{currState}</h2>
-          <img
-            onClick={() => setShowLogin(false)}
-            src={closeIcon}
-            alt="close icon"
-          />
-        </div>
+          <h1>{currState}</h1>
         <div className="login-wrapper">
           {currState === "Login" ? (
             <></>

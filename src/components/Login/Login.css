@@ -1,12 +1,9 @@
 .login{
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: 100%;
-    background-color: #00000090;
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 140px 0px;
 }
 .login-form{
     place-self: center;
@@ -19,12 +16,7 @@
     padding: 30px 30px;
     border-radius: 8px;
     font-size: 14px;
-}
-.logintop{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: black;
+    border: 1px solid var(--st-BL);
 }
 .logintop img{
     width: 30px;
@@ -43,7 +35,6 @@
 .login-flex{
     display: flex;
     align-items: center;
-    width: 100%;
     gap: 20px;
 }
 .login-content-wrapper{
@@ -117,36 +108,24 @@
         place-self: center;
         width: 400px;
         color: #808080;
-        background-color: var(--st-PR);
+        background-color: white;
         display: flex;
         flex-direction: column;
         gap: 25px;
-        padding: 20px;
+        padding: 30px 10px;
+        border-radius: 8px;
+        font-size: 24px;
+        border: 1px solid var(--st-BL);
     }
     .login-flex{
+        display: flex;
         flex-direction: column;
         align-items: start;
         gap: 20px;
     }
-    .logintop{
-        margin-top: 150px;
-        gap: 20px;
-        flex-direction: column-reverse;
-    }
-    .login-flex label{
-        font-size: 24px;
-        color: white;
-    }
-    .login-condition p{
-        font-size: 24px;
-        color: white;
-    }
-    .login-form button{
-        border: 1px solid black;
-        background-color: black;
-        color: white;
-    }
-    .logintop h2{
-        color: white;
+    .login-content-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }

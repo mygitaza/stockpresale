@@ -1,11 +1,11 @@
 import React from 'react'
 import './Hero.css'
 import heroImage from '../../assets/heroImagemain.svg'
-import { Link, useNavigate, useOutletContext } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 const Hero = () => {
-  const {setShowLogin} = useOutletContext();
+  
     const navigate = useNavigate();
     const user = useSelector((state) => state.auth.user); // ✅ Get user from Redux
   
@@ -15,8 +15,7 @@ const Hero = () => {
     if (user) {
       navigate('/dashboard/add-stock');
     } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setShowLogin(true);
+      navigate('/login');
     }
   }
   return (

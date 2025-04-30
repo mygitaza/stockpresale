@@ -1,6 +1,6 @@
 import React from 'react'
 import './Invest.css'
-import { Link, useNavigate, useOutletContext } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useSelector } from 'react-redux'
 
@@ -51,7 +51,6 @@ const investData = [
     
 ]
 const Invest = () => {
-    const {setShowLogin} = useOutletContext();
     const navigate = useNavigate();
     const user = useSelector((state) => state.auth.user);
 
@@ -59,8 +58,7 @@ const Invest = () => {
         if (user) {
           navigate('/dashboard/add-stock');
         } else {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          setShowLogin(true);
+            navigate('/login');
         }
       }
   return (

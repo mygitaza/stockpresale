@@ -3,9 +3,8 @@ import logo from '../../assets/logo.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import { useSelector } from 'react-redux'
-// import { isAuthenticated } from '../../util/auth'
 
-const Navbar = ({setShowLogin}) => {
+const Navbar = () => {
   const navigate = useNavigate();
   const user = useSelector((state) => state.auth.user); // ✅ Get user from Redux
 
@@ -13,7 +12,7 @@ const Navbar = ({setShowLogin}) => {
     if (user) {
       navigate('/dashboard/add-stock');
     } else {
-      setShowLogin(true);
+      navigate('/login');
     }
   };
 
