@@ -1,0 +1,44 @@
+.dashheader{
+    width: 100%;
+    background: #fff;
+    padding: 10px 20px;
+    background-color: var(--st-BL);
+}
+.dashnav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+.logo img{
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+.logo p {
+    white-space: nowrap;
+    position: absolute;
+    left: 60px; 
+    animation: slideText 40s linear infinite;
+    font-size: 14px;
+    color: #cecece;
+}
+@keyframes slideText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+@media (max-width:820px) {
+  .logo p {
+    font-size: 24px;
+}
+}

@@ -1,0 +1,71 @@
+.addstock-header hr{
+    width: 100%;
+}
+.addstock-checks-date{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.addstock-date{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.date-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border: 2px solid var(--st-BL);
+    padding: 10px;
+    border-radius: 5px;
+}
+.date-wrapper img{
+    width: 30px;
+    height: 30px;
+}
+.date-wrapper p{
+    font-size: 24px;
+    font-weight: 600;
+}
+.addstock-check{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.trade-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border: 2px solid var(--st-BL);
+    padding: 10px;
+    border-radius: 5px;
+}
+.trade-circle{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--st-BL);
+    background-color: var(--st-Wh);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.innercircle{
+    width: 15px;
+    height: 15px;
+    background-color: var(--st-PR);
+    border-radius: 50%;
+}
+.trade-wrapper{
+    font-size: 24px;
+    font-weight: 600;
+}
+@media (max-width:431px) {
+    .addstock-checks-date{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
