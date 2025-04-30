@@ -15,11 +15,15 @@
     color: var(--st-PR);
 }
 .invest-wrapper{
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    height: 350px;
+    width: 100%;
+    background-color: rgb(234, 232, 232);
+    padding: 10px;
 }
+/* .responsive-chart{
+    width: 100%;
+    height: 300px;
+} */
 .invest-content{
     background-image: linear-gradient(#121212, #2D1181);
     color: var(--st-Wh);
