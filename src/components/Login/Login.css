@@ -27,7 +27,7 @@
     color: black;
 }
 .logintop img{
-    width: 16px;
+    width: 30px;
     cursor: pointer;
 }
 .login-wrapper{
@@ -88,4 +88,37 @@
     color: tomato;
     font-weight: 500;
     cursor: pointer;
+}
+@media (max-width: 1024px) {
+    .login-flex label{
+        font-size: 24px;
+    }
+    .login-flex input{
+        font-size: 24px;
+    }
+    .login-form{
+        width: 700px;
+        font-size: 24px;
+    }
+    .register-select{
+        font-size: 24px;
+        padding: 20px;
+    }
+    .login-condition p{
+        font-size: 24px;
+    }
+    .login-form button{
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+@media (max-width: 431px) {
+    .login-form{
+        width: 390px;
+    }
+    .login-flex{
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
 }

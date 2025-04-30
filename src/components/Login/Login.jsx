@@ -60,6 +60,7 @@ const Login = ({ setShowLogin }) => {
           }
         dispatch(setUser(user));
         localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("token", token);
         console.log("User saved:", user);
         setShowLogin(false);
         navigate("/dashboard/add-stock");
@@ -160,6 +161,7 @@ const Login = ({ setShowLogin }) => {
                 <div className="login-content-wrapper">
                   <label>Country:</label>
                   <select
+                  className="register-select"
                     name="country"
                     value={formData.country}
                     onChange={handleChange}

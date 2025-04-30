@@ -1,7 +1,7 @@
 import React from 'react'
 import './Sidebar.css'
 import userIcon from '../../../assets/userIcon.svg'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useLogoutUserMutation } from '../../../redux/api/userApi'
 import { useDispatch } from 'react-redux'
 import { logOut } from '../../../redux/slices/authSlice'
@@ -9,6 +9,7 @@ import { logOut } from '../../../redux/slices/authSlice'
 const Sidebar = () => {
     const [logoutUser] = useLogoutUserMutation();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleLogout = async () =>{
         const confirmLogout = window.confirm("Are you sure you want to log out?");
@@ -16,6 +17,9 @@ const Sidebar = () => {
         try {
             await logoutUser().unwrap();
             dispatch(logOut());
+            localStorage.removeItem("user");
+            localStorage.removeItem("token");
+            navigate("/")
         } catch (error) {
             console.error(error, 'Failed to logout')
         }
