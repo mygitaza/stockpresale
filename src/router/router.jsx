@@ -6,6 +6,7 @@ import Dashboard from "../pages/UserDasboard/Dashboard/Dashboard";
 import Addstock from "../pages/UserDasboard/Addstock/Addstock";
 import Viewstock from "../pages/UserDasboard/Viewstock/Viewstock";
 import Privaterouter from "./Privaterouter";
+import Mydashboard from "../pages/UserDasboard/myDahboard/Mydashboard";
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
         path: "/dashboard",
         element: <Privaterouter><Dashboard /></Privaterouter>,
         children: [
+          { path: "", element: <Mydashboard /> },
           { path: "add-stock", element: <Addstock /> },
           { path: "view-stock", element: <Viewstock /> },
         ],

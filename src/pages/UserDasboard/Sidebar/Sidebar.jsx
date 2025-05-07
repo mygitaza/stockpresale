@@ -27,13 +27,9 @@ const Sidebar = () => {
 
   return (
     <div className='sidebar'>
-        <div className="sidebar-top">
-            <img src={userIcon} alt="user icon" />
-            <h3>Username</h3>
-            <hr />
-        </div>
         <div className="sidebar-wrapper">
             <div className="sidebar-nav">
+            <NavLink to='/dashboard' end className="navlink dashclass"> Dash board</NavLink>
                 <NavLink to='/dashboard/add-stock' className="navlink"> Get Stock</NavLink>
                 <NavLink to='/dashboard/view-stock' className="navlink"> View Stock</NavLink>
                 <hr />

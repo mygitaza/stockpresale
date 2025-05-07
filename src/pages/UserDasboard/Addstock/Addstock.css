@@ -22,7 +22,7 @@
 }
 .addstock-input input{
     padding: 20px;
-    font-size: 24px;
+    font-size: 20px;
     border: 1px solid var(--st-PR);
     width: 100px;
 }
@@ -31,7 +31,7 @@
 }
 .unitsvalue{
     padding: 20px;
-    font-size: 24px;
+    font-size: 20px;
     border: 1px solid var(--st-PR);
     height: 70px;
     background-color: rgba(0, 0, 0, 0.151);
@@ -68,10 +68,20 @@
 }
 .proceed-copy{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
     padding: 10px;
+}
+.wallets{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
     border: 1px solid var(--st-BL);
+    align-items: center;
+    padding: 10px;
+}
+.wallets-title{
+    font-weight: 600;
 }
 .proceed-copy img{
     width: 40px;
@@ -117,10 +127,20 @@
     .addstock{
         width: 300px;
     }
+    .wallets{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: start;
+        border: 1px solid var(--st-BL);
+        align-items: start;
+        gap: 10px;
+        padding: 10px;
+    }
     .proceed-copy{
         flex-direction: column;
     }
     .address{
-        font-size: 12px;
+        font-size: 10px;
     }
 }

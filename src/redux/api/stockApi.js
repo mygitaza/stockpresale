@@ -40,6 +40,6 @@ export const stockApi = createApi({
 export const {
     useAddStockMutation,
     useGetUserStocksQuery,
-    useApprovesStockMutation,
+    useApproveStockMutation,
     useDeleteStockMutation,
 } = stockApi

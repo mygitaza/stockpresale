@@ -7,7 +7,6 @@ import { useAddStockMutation, useGetUserStocksQuery } from '../../../redux/api/s
 const Viewstock = () => {
     const user = useSelector((state) => state.auth.user);
     const total = useSelector((state)=> state.stock.total);
-    const paymentStatus = useSelector((state)=> state.stock.status);
 
     const {
         data: stocks = [],     
@@ -47,16 +46,24 @@ const Viewstock = () => {
                 <p>Acquired</p>
                 <p>Payment</p>
             </div>
-            {
-                totalUnits >0 && (<div className='viewstock-content-bottom'>
-                <p>MODE Inc</p>
-                <p className='viewstock-units'>{totalUnits.toFixed(2)}</p>
-                <p>{isLoading? 'Saving...' : 'Successful'}</p>
-                <p className='payment-status'>{paymentStatus}</p>
-            </div>
-            )}
+            {stocks.length > 0 ? (
+  stocks.map((stock) => (
+    <div key={stock._id} className='viewstock-content-bottom'>
+      <p>MODE Inc</p>
+      <p className='viewstock-units'>{Number(stock.units).toFixed(2)}</p>
+      <p>{isLoading ? 'Saving...' : 'Successful'}</p>
+      <p className='payment-status'>{stock.status}</p>
+    </div>
+  ))
+) : (
+  <p>No stock available</p>
+)}
+            
             {error && <p className="error-text">Failed to save stock.</p>}
 
+        </div>
+        <div>
+            <p>Total Stock Units: <span className='total-units'>{totalUnits.toFixed(2)}</span></p>
         </div>
     </div>
   )

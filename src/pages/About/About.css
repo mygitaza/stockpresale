@@ -92,13 +92,13 @@
         width: 100%;
     }
     .about-left h1{
-        font-size: 38px;
+        font-size: 26px;
     }
     .about-left p{
-        font-size: 24px;
+        font-size: 20px;
     }
     .about-link{
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 @media (max-width:768px) {

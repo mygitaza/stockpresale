@@ -1,0 +1,34 @@
+.my-dashboard{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 600px;
+}
+.dashboard-top{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.dashboard-top-content{
+    display: flex;
+    padding: 10px;
+    border: 1px solid var(--st-BL);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.page-content{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+@media (max-width: 431px) {
+    .my-dashboard{
+        width: 350px;
+    }
+    .dashboard-top-content{
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+    }
+}

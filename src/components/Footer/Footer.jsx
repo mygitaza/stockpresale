@@ -1,6 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import logo from '../../assets/logo.svg'
+import Chart from '../chart/Chart';
 
 const Footer = () => {
     const date = new Date();
@@ -12,18 +13,7 @@ const Footer = () => {
             <img src={logo} alt="logo" />
         </div>
         <div className="footer-center">
-            <p>Need Help</p>
-            <ul>
-                <li>Contact us</li>
-                <li>Help center</li>
-            </ul>
-        </div>
-        <div className="footer-right">
-            <ul>
-                <li>Terms of use</li>
-                <li>Privacy policy</li>
-                <li>Disclaimer</li>
-            </ul>
+            <Chart/>
         </div>
         </div>
         <hr className='footer-line' />

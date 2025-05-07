@@ -74,8 +74,17 @@ const Addstock = () => {
         {usdValue && (
           <div className="proceed-copy">
             { copyText && <p className='copied-text'>Copied</p>}
-            <p className='address'>fghgutoimnahgfbvsgdcvfopxxcvbn1234hnmj5</p>
+            <div className='wallets'>
+                <p className='wallets-title'>USDT, <br /> Network = Trc20:</p>
+            <p className='address'>TMpxzAsbHH4EadaApJrBGFGTysXxfHWEwR</p>
             <img src={copyIcon} alt="copy icon" onClick={handleCopyText} />
+            </div>
+            { copyText && <p className='copied-text'>Copied</p>}
+            <div className='wallets'>
+                <p className='wallets-title'>BTC:</p>
+            <p className='address'>bc1qw87kzv7kajg8e283tszkrtc268gfvyv6n8ap0n</p>
+            <img src={copyIcon} alt="copy icon" onClick={handleCopyText} />
+            </div>
           </div>
         )}
             <button onClick={handleProceedClick} disabled={total <= 0 || isNaN(total)} className='proceed-btn'>Proceed</button>

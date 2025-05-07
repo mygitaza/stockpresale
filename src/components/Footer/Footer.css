@@ -16,12 +16,18 @@
     justify-content: space-between;
 }
 .footer-logo img{
-    width: 321px;
-    height: 339px;
+    width: 221px;
+    height: 239px;
 }
 .footer-line{
     width: 100%;
     background-color: var(--st-Wh);
+}
+.footer-center{
+    height: 250px;
+    width: 100%;
+    background-color: rgb(234, 232, 232);
+    padding: 10px;
 }
 @media (max-width:1024px) {
     .footer{
@@ -30,10 +36,6 @@
     .footer li{
         font-size: 24px;
         list-style: none;
-    }
-    .footer-center p{
-        font-size: 24px;
-        font-weight: 700;
     }
 }
 @media (max-width:768px) {

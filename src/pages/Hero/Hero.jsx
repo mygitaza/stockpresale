@@ -13,7 +13,7 @@ const Hero = () => {
 
   const handlePreSaleClick = () =>{
     if (user) {
-      navigate('/dashboard/add-stock');
+      navigate('/dashboard');
     } else {
       navigate('/login');
     }

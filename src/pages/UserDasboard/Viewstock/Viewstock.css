@@ -14,12 +14,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
     border-top: 1px solid var(--st-BL);
     border-bottom: 1px solid var(--st-BL);
     padding: 10px 0px;
+    overflow-x: scroll;
 }
 .viewstock-content-header p{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
 }
 .viewstock-content-bottom{
@@ -27,9 +29,14 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 0px;
+    overflow-x: scroll;
+    gap: 40px;
 }
 .viewstock-content-bottom p:nth-child(3){
     color: rgb(135, 29, 29);
+}
+.total-units{
+    font-weight: 700;
 }
 @media (max-width:820px) {
     .viewstock{
@@ -48,7 +55,7 @@
     .viewstock{
         width: 300px;
     }
-    .viewstock-wrapper{
+    /* .viewstock-wrapper{
         display: flex;
         flex-direction: row;
         gap: 10px;
@@ -64,5 +71,5 @@
         flex-direction: column;
         gap: 20px;
         align-items: start;
-    }
+    } */
 }

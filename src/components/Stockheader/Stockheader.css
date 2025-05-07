@@ -1,3 +1,6 @@
+.addstock-header h1{
+    font-size: 26px;
+}
 .addstock-header hr{
     width: 100%;
 }
@@ -24,7 +27,7 @@
     height: 30px;
 }
 .date-wrapper p{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
 }
 .addstock-check{
@@ -57,7 +60,7 @@
     border-radius: 50%;
 }
 .trade-wrapper{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
 }
 @media (max-width:431px) {

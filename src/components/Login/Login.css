@@ -82,39 +82,39 @@
 }
 @media (max-width: 1024px) {
     .login-flex label{
-        font-size: 24px;
+        font-size: 20px;
     }
     .login-flex input{
-        font-size: 24px;
+        font-size: 20px;
     }
     .login-form{
         width: 700px;
-        font-size: 24px;
+        font-size: 20px;
     }
     .register-select{
-        font-size: 24px;
+        font-size: 20px;
         padding: 20px;
     }
     .login-condition p{
-        font-size: 24px;
+        font-size: 20px;
     }
     .login-form button{
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 600;
     }
 }
 @media (max-width: 431px) {
     .login-form{
         place-self: center;
-        width: 400px;
+        width: 350px;
         color: #808080;
         background-color: white;
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 30px;
         padding: 30px 10px;
         border-radius: 8px;
-        font-size: 24px;
+        font-size: 20px;
         border: 1px solid var(--st-BL);
     }
     .login-flex{
